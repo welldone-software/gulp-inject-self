@@ -21,7 +21,7 @@
 >       .pipe(gulp.dest('.'));
 >}
 >```
->outputs
+>outputs stream.txt with the content:
 >```
 >dest
 >my own file
@@ -40,7 +40,7 @@
 >       .pipe(gulp.dest('.'));
 >}
 >```
->outputs
+>outputs stream.txt with the content:
 >```
 >dest
 >insert here

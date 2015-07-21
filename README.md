@@ -14,19 +14,30 @@
 >dest
 >```
 >
+> the code
+>
 >```js
 >var injectSelf = require('gulp-inject-self');
 >
 >gulp.task('inject', function(){
->
 >    return gulp.src('stream.txt')
 >       .pipe(injectSelf('dest.txt', /insert here/))
 >       .pipe(gulp.dest('.'));
->    //outputs
->    //dest
->    //my own file
->    //dest
+>}
+>```
+>outputs
+>```
+>dest
+>my own file
+>dest
+>```
 >
+> and the code
+>
+>```js
+>var injectSelf = require('gulp-inject-self');
+>
+>gulp.task('inject', function(){
 >    return gulp.src('stream.txt')
 >       .pipe(injectSelf('dest.txt', /insert here/, {
 >            replaceWith: function(fileContent){
@@ -34,15 +45,15 @@
 >            }
 >       }))
 >       .pipe(gulp.dest('.'));
->    //outputs
->    //dest
->    //insert here
->    //my own file
->    //dest
->
 >}
 >```
->
+>outputs
+>```
+>dest
+>insert here
+>my own file
+>dest
+>```
 
 ## Getting Started
 This plugin requires Gulp `~3.5.5`

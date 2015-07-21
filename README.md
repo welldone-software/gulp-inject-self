@@ -2,15 +2,47 @@
 
 > A [Gulp](http://gulpjs.com/) that injects self stream to a destination file.
 
+> for stream.txt:
+>```
+>my own file
+>```
+>
+>and for dest.txt:
+>```
+>dest
+>insert here
+>dest
+>```
+>
 >```js
 >var injectSelf = require('gulp-inject-self');
+>
 >gulp.task('inject', function(){
->    return gulp.src(templateFiles)
->       .pipe(template(templateArgs))
->       .pipe(concat(null, {newLine: '\n\n'}))
->       .pipe(injectSelf(dest, regex));
+>
+>    return gulp.src('stream.txt')
+>       .pipe(injectSelf('dest.txt', /insert here/))
+>       .pipe(gulp.dest('.'));
+>    //outputs
+>    //dest
+>    //my own file
+>    //dest
+>
+>    return gulp.src('stream.txt')
+>       .pipe(injectSelf('dest.txt', /insert here/, {
+>            replaceWith: function(fileContent){
+>                return '$&\n' + fileContent;
+>            }
+>       }))
+>       .pipe(gulp.dest('.'));
+>    //outputs
+>    //dest
+>    //insert here
+>    //my own file
+>    //dest
+>
 >}
 >```
+>
 
 ## Getting Started
 This plugin requires Gulp `~3.5.5`

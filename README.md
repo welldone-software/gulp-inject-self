@@ -67,7 +67,7 @@ var injectSelf = require('gulp-inject-self');
 
 #### options.replaceWith
 Type: `Function`
-Default value: `function(contents){ return contents; };`
+Default value: `function(contents){ return contents; }`
 
 Preprocessing the contents of file from the gulp stream when replace is applied on the target file.
 

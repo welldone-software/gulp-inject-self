@@ -6,19 +6,15 @@
 >```
 >my own file
 >```
->
 >and for dest.txt:
 >```
 >dest
 >insert here
 >dest
 >```
->
 > the code
->
 >```js
 >var injectSelf = require('gulp-inject-self');
->
 >gulp.task('inject', function(){
 >    return gulp.src('stream.txt')
 >       .pipe(injectSelf('dest.txt', /insert here/))
@@ -31,17 +27,14 @@
 >my own file
 >dest
 >```
->
 > and the code
->
 >```js
 >var injectSelf = require('gulp-inject-self');
->
 >gulp.task('inject', function(){
 >    return gulp.src('stream.txt')
 >       .pipe(injectSelf('dest.txt', /insert here/, {
 >            replaceWith: function(fileContent){
->                return '$&\n' + fileContent;
+>                return '$&\n' + fileContent; //the string being replaced, new line, file content from the stream
 >            }
 >       }))
 >       .pipe(gulp.dest('.'));

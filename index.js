@@ -6,7 +6,7 @@ var through = require('through2'),
 const PLUGIN_NAME = 'gulp-inject-self';
 
 function wrapRegex(destPath, search, options) {
-  var replaceWith = options.replaceWith || function(contents){ return contents; };
+  var replaceWith = (options && options.replaceWith) || function(contents){ return contents; };
 
   return through.obj(function(file, enc, callback) {
     if (file.isNull()) {

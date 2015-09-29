@@ -1,16 +1,12 @@
 {
   "name": "gulp-inject-self",
   "description": "A gulp plugin that injects self stream to a destination file.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "homepage": "https://github.com/welldone-software/gulp-inject-self",
-  "author": {
-    "name": "Welldone Software Solutions Ltd.",
-    "email": "danikenan@gmail.com",
-    "url": "http://welldone-software.com"
-  },
+  "author": "Welldone Software Solutions Ltd. <danikenan@gmail.com> (http://welldone-software.com)",
   "repository": {
     "type": "git",
-    "url": "git@github.com:welldone-software/gulp-inject-self.git"
+    "url": "git+ssh://git@github.com/welldone-software/gulp-inject-self.git"
   },
   "bugs": {
     "url": "https://github.com/welldone-software/gulp-inject-self/issues"
@@ -34,8 +30,18 @@
     "replace",
     "inject"
   ],
+  "scripts": {
+    "test": "npm install && gulp"
+  },
   "dependencies": {
     "gulp-util": "^3.0.6",
     "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-diff": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "rimraf": "^2.4.3",
+    "run-sequence": "^1.1.4"
   }
 }

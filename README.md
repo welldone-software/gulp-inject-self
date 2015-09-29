@@ -82,6 +82,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
  - 0.0.1 - initial release.
+ - 1.0.0 - added tests, fixed bugs.
 
 ## License
 [MIT](https://github.com/welldone-software/gulp-inject-self/blob/master/LICENSE)

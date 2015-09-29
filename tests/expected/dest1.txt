@@ -1,0 +1,3 @@
+dest
+my own stream
+dest

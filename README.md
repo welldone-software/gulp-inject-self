@@ -1,6 +1,6 @@
 # gulp-inject-self
 
-> A [Gulp](http://gulpjs.com/) that injects self stream to a destination file.
+A [Gulp](http://gulpjs.com/) that injects self stream to a destination file.
 
 > for stream.txt:
 >```
